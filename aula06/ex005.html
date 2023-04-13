@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Starting studies with DOM</h1>
+    <p>The results are here</p>
+    <p>Learning to use <strong>DOM</strong> in JS</p>
+    <div class="iden">Click here</div>
+    <script>
+        var a = window.document.querySelector('div.iden')
+        a.style.background = 'black'
+        a.style.color = 'white'
+        a.innerText = 'TRISTE...'
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As 4 operações</title>
+</head>
+<body>
+    <h1>Operações</h1>
+    <h2>Subtração</h2>
+    <input type="text" name="sub1" class="sub1"> -
+    <input type="text" name="sub2" class="sub2">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <div class="r1">Resultado: </div>
+    <h2>Soma</h2>
+    <input type="text" name="som1" class="som1"> +
+    <input type="text" name="som2" class="som2">
+    <input type="button" value="somar" onclick="somar()">
+    <div class="r2">Resultado:</div>
+    <h2>Multiplicação</h2>
+    <input type="text" name="mul1" class="mul1"> *
+    <input type="text" name="mul2" class="mul2">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+    <div class="r3">Resultado:</div>
+    <h2>Divisão</h2>
+    <input type="text" name="div1" class="div1"> /
+    <input type="text" name="div2" class="div2">
+    <input type="button" value="dividir" onclick="dividir()">
+    <div class="r4">Resultado:</div>
+    <script>
+    function subtrair() {
+        var sub1 = window.document.querySelector('input.sub1')
+        var sub2 = window.document.querySelector('input.sub2')
+        var r1 = window.document.querySelector('div.r1')
+        var n1 = Number(sub1.value)
+        var n2 = Number(sub2.value)
+        var s = n1 - n2
+        r1.innerHTML = `O resultado da subtração entre ${n1} e ${n2} é igual a ${s}`
+    }
+    function somar() {
+        var som1 = window.document.querySelector('input.som1')
+        var som2 = window.document.querySelector('input.som2')
+        var r2 = window.document.querySelector('div.r2')
+        var n1 = Number(som1.value)
+        var n2 = Number(som2.value)
+        var s = n1 + n2
+        r2.innerHTML = `O resultado da soma entre ${n1} e ${n2} é igual a ${s}`
+    }
+    function multiplicar() {
+        var mul1 = window.document.querySelector('input.mul1')
+        var mul2 = window.document.querySelector('input.mul2')
+        var r3 = window.document.querySelector('div.r3')
+        var n1 = Number(mul1.value)
+        var n2 = Number(mul2.value)
+        var s = n1*n2
+        r3.innerHTML = `O resultado da multiplicação entre ${n1} e ${n2} é igual a ${s}`
+    }
+    function dividir() {
+        var div1 = window.document.querySelector('input.div1')
+        var div2 = window.document.querySelector('input.div2')
+        var r4 = window.document.querySelector('div.r4')
+        var n1 = Number(div1.value)
+        var n2 = Number(div2.value)
+        var s = n1/n2
+        r4.innerHTML = `O resultado da subtração entre ${n1} e ${n2} é igual a ${s}`
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste Exército</h1>
+    <p>Informe o sexo [F/M]: <input type="text" name="sexo" id="sexo"></p>
+    <p>Informe a idade: <input type="number" name="idade" id="idade"></p>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var sexo = document.querySelector('input#sexo')
+            var s = String(sexo.value)
+            var idade = document.querySelector('input#idade')
+            var i = Number(idade.value)
+            var res = document.querySelector('div#res')
+            res.innerHTML = `Sua idade: ${i} e seu gênero: ${s}`
+            if ((i >= 18) && (s == 'M')){
+                res.innerHTML += `<P>Você está <strong>APTO</strong> a servir!</P>`
+            } else {
+                res.innerHTML += `<P>Você está <strong>INAPTO</strong> a servir!</P>`
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
